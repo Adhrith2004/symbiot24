@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  String disease = 'Some Disease';
-  String treatment = 'Some Treatment';
-  runApp(MaterialApp(
-    home: PatientDiagnosisPage(disease: disease, treatment: treatment),
-  ));
-}
-
 class PatientDiagnosisPage extends StatelessWidget {
   final String disease;
   final String treatment;
@@ -20,19 +12,19 @@ class PatientDiagnosisPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Patient Diagnosis'),
+        title: Text('Patient Diagnosis'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
-              'Disease: Some Disease',
+              'Disease: $disease',
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 10),
             Text(
-              'Treatment: Some Treatment',
+              'Treatment: $treatment',
               style: TextStyle(fontSize: 20),
             ),
           ],
