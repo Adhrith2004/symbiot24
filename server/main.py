@@ -13,7 +13,6 @@ def predict():
     prediction = model.predict([[np.array(data['exp'])]])
     # Take the first value of prediction
     return prediction
-    
 
 
 if __name__ == '__main__':
